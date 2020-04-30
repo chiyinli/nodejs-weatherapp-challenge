@@ -1,0 +1,26 @@
+body {
+    background-color: orange;
+    box-sizing: border;
+}
+h1 {
+    color: silver;
+}
+h2 {
+    color: greenyellow;
+}
+h4 {
+    color: blueviolet;
+}
+input {
+    padding: 7px 7px;
+    background-color: aqua;
+    color: magenta;
+}
+button {
+    padding: 7px 7px;
+    color: magenta;
+    background-color: aqua;
+}
+script {
+    padding: 7px 7px;
+}

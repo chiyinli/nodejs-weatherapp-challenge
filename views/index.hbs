@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Weather App Project</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="header"
+    <h1>Welcome To My Weather App For Node.JS</h1>
+    </div>
+    <div class="one">
+        <h2 id="info">Enter a City and Country</h2>
+
+    <form action="/api/weather" method="POST">
+        <input type="text" name="cityName" placeholder="City Name" required/>
+        <input type="text" name="country" placeholder="Country Name" required/>
+        
+        <button type="submit">Get Information</button>
+        
+    </form>
+
+    {{#if weather}}
+    <h2>The Temperature</h2>
+    <h4>{{weather}}˚C in Celsius</h4>
+    <h4>{{tempMin}}˚C Minimum Temperature</h4>
+    <h4>{{tempMax}}˚C Maximum Temperature</h4>
+    <h4>{{pressure}} Pressure</h4>
+    <h4>{{humidity}} Humidity</h4>
+    <h4>{{descriptions}}</h4>
+    <img src="/{{icon}}.png" alt={{this.icon}}>
+    <div id="openweathermap-widget-11"></div>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '2643743',appid: 'f91cccea650ab22d52cc5985574896b3',units: 'metric',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+    {{/if}}
+    </div>
+</body>
+</html>
